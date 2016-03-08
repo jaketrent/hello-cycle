@@ -2,7 +2,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: [
-    'babel/polyfill',
+    'babel-polyfill',
     './index'
   ],
   output: {
@@ -11,7 +11,7 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.js$/, loader: 'babel-loader?stage=0' }
+      { test: /\.js$/, loader: 'babel' }
     ]
   },
   devServer: {
@@ -20,7 +20,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: 'node_modules/html-webpack-template/index.html',
-      title: 'React!',
+      title: 'Cycle.js!',
       devServer: 'http://localhost:3000',
       appMountId: 'app'
     })
